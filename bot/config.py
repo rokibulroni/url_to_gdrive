@@ -1,13 +1,13 @@
 class config:
-    BOT_TOKEN = "1917434236:AAHHehtEgKkZL42SZC6wAQFE50EjNfJJzwY"
-    APP_ID = "7693500"
-    API_HASH = "8d82e2ae3917b001afb9a3e2c1ba2ce6"
-    DATABASE_URL = "postgres://lgnkkfpslrowwm:8fa3e09f45ba61234542ce0c7a091bed1fd75c002ec5d042752d15be1c5dc8bd@ec2-3-218-47-9.compute-1.amazonaws.com:5432/d819o1ho1b6m7c"
-    SUDO_USERS = "1952030175 1317820373" # Sepearted by space.
+    BOT_TOKEN = "2018841489:AAEC-_VmCAR1tDVfZF0fmRgN2QHrtDvbiYc"
+    APP_ID = "7897790"
+    API_HASH = "265e2cee7c34b572c12d30573aafa622"
+    DATABASE_URL = ""
+    SUDO_USERS = "7897790" # Sepearted by space.
     DOWNLOAD_DIRECTORY = "./downloads/"
-    G_DRIVE_CLIENT_ID = "962811802516-2cktruf88k0udcijltsbap0g5ntfm0rt.apps.googleusercontent.com"
-    G_DRIVE_CLIENT_SECRET = "Fj9ZsrS9WzAYLwyP8cO6Vw8b"
-    SUPPORT_CHAT_LINK = "https://t.me/moedyiu"
+    G_DRIVE_CLIENT_ID = "1060913887004-ebrateq4j4tva7q7lfinji0r4754i45i.apps.googleusercontent.com"
+    G_DRIVE_CLIENT_SECRET = "01J-BNqLoHzZpMKOkZDIEOIy"
+    SUPPORT_CHAT_LINK = "https://t.me/rokibulroni"
  
 
 class BotCommands:
@@ -37,9 +37,8 @@ class Messages:
         
         "**Rules & Precautions**\n__1. Don't copy BIG Google Drive Files/Folders. It may hang the bot and your files maybe damaged.\n2. Send One request at a time unless bot will stop all processes.\n3. Don't send slow links @transload it first.\n4. Don't misuse, overload or abuse this free service.__",
         
-        # Dont remove this ↓ if you respect developer.
          
-        "**Join Channel @modbots**"
+        "**ASK Admin @rokibulroni**"
         ]
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
