@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import wget
 import json
 from telegram.ext import CommandHandler, MessageHandler, Filters, Updater
 from telegram import ParseMode
@@ -10,18 +10,20 @@ from upload import upload
 from creds import Creds
 from pySmartDL import SmartDL
 from pydrive.auth import GoogleAuth
-
+import plugins.download
 from plugins import TEXT
-
+from plugins.download import download_wget
 from plugins.tok_rec import is_token
 from time import time
 import subprocess
+# from plugins.dlopenload import DLOPENLOAD
 from plugins.dpbox import DPBOX
 from plugins.wdl import wget_dl
 import re
-from mega import Mega
-
+#from mega import Mega
+# import importlib.util
 gauth = GoogleAuth()
+#PORT = int(os.environ.get('PORT', 5000))
 
 
 ######################################################################################
@@ -91,7 +93,8 @@ def token(update, context):
             print("Auth Error :", e)
             context.bot.send_message(chat_id=update.message.chat_id,
                                      text=TEXT.AUTH_ERROR)
-   
+    else:
+        print("wrong input")
 
 # command `Start`
 @run_async
@@ -130,39 +133,17 @@ def UPLOAD(update, context):
 
         # I will Add This Later
         if "openload" in url or "oload" in url:
-            
+            # url = DLOPENLOAD(url)
+            # filename = url.split("/")[-1]
+            # sent_message.edit_text(TEXT.OL_DOWNLOAD)
+            # # filename = wget.download(url)
+            # filename = wget_dl(str(url))
+            # print("Downloading Complete : {}".format(filename))
+            # sent_message.edit_text(TEXT.DOWN_COMPLETE)
             DownloadStatus = False
-            sent_message.edit_text("Openload No longer avalible")
-            return
-        
-            # Here is DropBox Stuffs
-        elif 'dropbox.com' in url:
+            sent_message.edit_text("Openload is currently not supported")
 
-            url = DPBOX(url)
-            filename = url.split("/")[-1]
-            print("Dropbox link Downloading Started : {}".format(
-                url.split("/")[-1]))
-            sent_message.edit_text(TEXT.DP_DOWNLOAD)
-            # filename = wget.download(url)
-            filename = wget_dl(str(url))
-            print("Downloading Complete : {}".format(filename))
-            sent_message.edit_text(TEXT.DOWN_COMPLETE)
-            DownloadStatus = True
-           # Here IS Mega Links stuffs
-        elif 'mega.nz' in url:
-
-            try:
-                print("Downlaoding Started")
-                sent_message.edit_text(TEXT.DOWN_MEGA)
-                m = Mega.from_credentials(TEXT.MEGA_EMAIL, TEXT.MEGA_PASSWORD)
-                filename = m.download_from_url(url)
-                print("Downloading Complete Mega :", filename)
-                sent_message.edit_text(TEXT.DOWN_COMPLETE)
-
-                DownloadStatus = True
-            except Exception as e:
-                print("Mega Downloding Error :", e)
-                sent_message.edit_text("Mega Downloading Error !!")
+          
 
         else:
             try:
@@ -170,8 +151,8 @@ def UPLOAD(update, context):
 
                 print("Downloading Started : {}".format(url.split("/")[-1]))
                 sent_message.edit_text(TEXT.DOWNLOAD)
-                # filename = wget.download(url)
-                filename = wget_dl(str(url))
+                filename = wget.download(url)
+                #filename = wget_dl(str(url))
                 print("Downloading Complete : {}".format(filename))
                 sent_message.edit_text(TEXT.DOWN_COMPLETE)
                 DownloadStatus = True
@@ -220,9 +201,9 @@ def UPLOAD(update, context):
                 except Exception as e:
                     print("error Code : UPX11", e)
                     sent_message.edit_text("Uploading fail :{}".format(e))
-                else:
-                    sent_message.edit_text(TEXT.DOWNLOAD_URL.format(
-                        FILENAME, SIZE, FILELINK), parse_mode=ParseMode.HTML)
+
+                sent_message.edit_text(TEXT.DOWNLOAD_URL.format(
+                    FILENAME, SIZE, FILELINK), parse_mode=ParseMode.HTML)
                 print(filename)
                 try:
                     os.remove(filename)
@@ -273,3 +254,6 @@ dp.add_handler(revoke_handler)
 
 updater.start_polling()
 updater.idle()
+if __name__ == '__main__':
+    main()
+
