@@ -4,7 +4,7 @@ Personal bot for URL to GDRIVE Uploader by Python
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # Google Drive Uploader Bot
-Here Is Live Version Of Bot  [Gdriveupme_bot](http://telegram.dog/uprialms_bot)
+Here Is Live Version Of Bot  [uprialms_bot](http://telegram.dog/uprialms_bot)
 
 
 # Update (30 May 2020)
