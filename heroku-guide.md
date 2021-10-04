@@ -43,5 +43,4 @@
 ## NOTE
 - Don't change/edit variables from Heroku if you want to change/edit do it from `config.env`
 
-## Credits
-- [arghyac35](https://github.com/arghyac35) for Tutorial
+
