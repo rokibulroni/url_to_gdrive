@@ -7,9 +7,10 @@ Personal bot for URL to GDRIVE Uploader by Python
 Here Is Live Version Of Bot  [uprialms_bot](http://telegram.dog/uprialms_bot)
 
 
-# Update (30 May 2020)
+# Update (04 OCT 2021)
 
 - Teamdrive Support added 
+- Fix Bugs
 
 
 `Teamdrive is not for users You have to hardcode it ,`
