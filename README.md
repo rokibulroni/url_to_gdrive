@@ -3,6 +3,15 @@ Personal bot for URL to GDRIVE Uploader by Python
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
+
+![GitHub Repo stars](https://img.shields.io/github/stars/rialms/url_to_gdrive?color=blue&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/rialms/url_to_gdrives?color=green&style=flat)
+![GitHub contributors](https://img.shields.io/github/contributors/rialms/url_to_gdrive?style=flat)
+![GitHub watchers](https://img.shields.io/github/watchers/rialms/url_to_gdrive)
+[![Channel](https://img.shields.io/badge/Subscribe%20Newsletter-!-red)](https://www.rokibulroni.com)
+[![rialms](https://cdn.jsdelivr.net/gh/rialms/resources@master/urlgdrive.gif)]
+
+
 # Google Drive Uploader Bot
 Here Is Live Version Of Bot  [uprialms_bot](http://telegram.dog/uprialms_bot)
 
